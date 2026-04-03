@@ -37,19 +37,23 @@ WHERE channel != 'dealership';
 ```
 ```
 ### могло быть Задание 3. (мак не дает доступ...)
--- 1. Создать таблицу ny_sales
+**1. Создать таблицу ny_sales**
+```sql
 CREATE TABLE ny_sales AS
 SELECT *
 FROM sales
 WHERE dealership_id = 15;
-
--- 2. Уменьшить сумму на 10%
+```
+**2. Уменьшить сумму на 10%**
+```sql
 UPDATE ny_sales
 SET sales_amount = sales_amount * 0.9;
-
--- 3. Удалить продажи 2010 года
+```
+**3. Удалить продажи 2010 года**
+```sql
 DELETE FROM ny_sales
 WHERE EXTRACT(YEAR FROM sales_transaction_date) = 2010;
-
--- 4. Проверить результат
+```
+**4. Проверить результат**
+```sql
 SELECT * FROM ny_sales;
