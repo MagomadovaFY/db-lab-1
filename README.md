@@ -32,3 +32,5 @@ LIMIT 10;
 SELECT *
 FROM sales
 WHERE channel != 'dealership';
+```
+**https://github.com/MagomadovaFY/db-lab-1/blob/e841ab1f7ec95aec5ed54c83f6422c0b59c7d16d/%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8.png**
