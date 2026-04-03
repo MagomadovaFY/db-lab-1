@@ -1,5 +1,58 @@
 # Лабораторная работа №1
 
+
+### Задание 1.1. Базовый поиск (Salespeople)
+
+**Условие:**  
+Вывести username первых 10 нанятых женщин-продавцов, отсортированных по дате найма от самой ранней к поздней. Аналогично для мужчин.
+
+**SQL-запросы:**
+
+```sql
+-- Женщины
+SELECT username
+FROM salespeople
+WHERE gender = 'Female'
+ORDER BY hire_date ASC
+LIMIT 10;
+
+-- Мужчины
+SELECT username
+FROM salespeople
+WHERE gender = 'Male'
+ORDER BY hire_date ASC
+LIMIT 10;
+```
+### Задание 1.2. Работа с клиентами (Customers) ###
+**Условия:**
+
+Все email клиентов из штата Флорида (FL), отсортированные по алфавиту.
+
+Имена, фамилии и email клиентов из New York City, NY, отсортированные по фамилии, затем по имени.
+
+Все клиенты с телефонами, отсортированные по дате добавления.
+
+**SQL-запросы:**
+```sql
+-- Email из FL
+SELECT email
+FROM customers
+WHERE state = 'FL'
+ORDER BY email ASC;
+
+-- Клиенты из NYC
+SELECT first_name, last_name, email
+FROM customers
+WHERE city = 'New York City' AND state = 'NY'
+ORDER BY last_name, first_name;
+
+-- Клиенты с телефонами
+SELECT *
+FROM customers
+WHERE phone IS NOT NULL
+ORDER BY date_added;
+
+```
 ## Вариант 11
 
 ---
