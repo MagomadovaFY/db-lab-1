@@ -12,5 +12,3 @@ SELECT *
 FROM emails
 ORDER BY sent_date DESC
 LIMIT 10;
-
-
