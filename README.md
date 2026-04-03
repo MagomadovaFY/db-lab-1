@@ -34,3 +34,22 @@ FROM sales
 WHERE channel != 'dealership';
 ```
 **https://github.com/MagomadovaFY/db-lab-1/blob/e841ab1f7ec95aec5ed54c83f6422c0b59c7d16d/%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8.png**
+```
+```
+### могло быть Задание 3. (мак не дает доступ...)
+-- 1. Создать таблицу ny_sales
+CREATE TABLE ny_sales AS
+SELECT *
+FROM sales
+WHERE dealership_id = 15;
+
+-- 2. Уменьшить сумму на 10%
+UPDATE ny_sales
+SET sales_amount = sales_amount * 0.9;
+
+-- 3. Удалить продажи 2010 года
+DELETE FROM ny_sales
+WHERE EXTRACT(YEAR FROM sales_transaction_date) = 2010;
+
+-- 4. Проверить результат
+SELECT * FROM ny_sales;
